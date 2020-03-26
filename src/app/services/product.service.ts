@@ -9,7 +9,7 @@ export class ProductService {
   getProduct(){
     return this.products;
   }
-  
+
   removeProduct(id){
     return this.products = this.products.filter(product => product.id != id)
   }
@@ -21,5 +21,10 @@ export class ProductService {
     this.products.push(newObj);
     console.log(this.products)
   }
+
+  // selected: Product;
+  // showDetail(product){
+  //   this.selected = product;
+  // }
 
 }

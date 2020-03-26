@@ -11,7 +11,14 @@
             </h4>
             <h5>${{product.price}}</h5>
             <p class="card-text">{{product.desc}}</p>
+            <p class="card-text">{{product.status ? 'còn hàng':'hết hàng'}}</p>
         </div>
+        <button class="btn btn-primary" (click)="ShowDetail(product)">Chi tiết</button>
         </div>
     </div>
+  </div>
+  <div> Tên : {{select.name}}<br>
+        giá: {{select.price}}<br>
+        mô tả : {{select.desc}}<br>
+        trạng thái: {{select.status ? 'còn hàng':'hết hàng'}}
   </div>
