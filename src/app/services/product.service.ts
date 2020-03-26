@@ -5,9 +5,11 @@ import { Product } from '../product';
 export class ProductService {
   products = data;
   constructor() { }
+
   getProduct(){
     return this.products;
   }
+  
   removeProduct(id){
     return this.products = this.products.filter(product => product.id != id)
   }
@@ -18,6 +20,6 @@ export class ProductService {
     console.log(newObj);
     this.products.push(newObj);
     console.log(this.products)
-
   }
+
 }
