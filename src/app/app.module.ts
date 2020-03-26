@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SlideComponent } from './slide/slide.component';
 import { CategoryComponent } from './category/category.component';
@@ -37,6 +37,7 @@ import { TableComponent } from './table/table.component';
     TableComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule

@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { data } from '../mockdata';
 import { Product } from '../product';
+import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class ProductService {
   products = data;
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 
   getProduct(){
     return this.products;
