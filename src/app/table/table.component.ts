@@ -22,6 +22,7 @@ export class TableComponent implements OnInit {
     return this.products = this.productService.removeProduct(id);
   }
   getProduct(){
-  this.products = this.productService.getProduct();
+    this.productService.getProduct().subscribe(data => {this.products = data;})
+  // this.products = this.productService.getProduct();
 }
 }
