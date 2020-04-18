@@ -29,13 +29,7 @@
               "src/assets/css/flexslider.css",
               "src/assets/css/jquery-ui.css",
               "src/assets/css/memenu.css",
-              "src/assets/css/style.css",
-              // "src/assets/js/jquery-ui.js",
-              "src/assets/js/jquery.flexisel.js",
-              "src/assets/js/jquery.flexslider.js",
-              "src/assets/js/jquery.min.js",
-              "src/assets/js/memenu.js",
-              "src/assets/js/simpleCart.min.js"
+              "src/assets/css/style.css"
 
             ],
             "scripts": []

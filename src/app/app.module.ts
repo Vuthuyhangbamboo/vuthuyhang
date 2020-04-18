@@ -9,6 +9,8 @@ import { ContentComponent } from './content/content.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     ContentComponent,
     IntroduceComponent,
     ProductComponent,
-    FooterComponent
+    FooterComponent,
+    ProductListComponent
   ],
   imports: [
     HttpClientModule,
@@ -28,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     // FormsModule
   ],
   // providers: [ProductService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [ProductService]
 })
 export class AppModule { }
