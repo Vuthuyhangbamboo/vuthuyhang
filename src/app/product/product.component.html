@@ -3,7 +3,7 @@
 		 <h3>Featured Products</h3>
 		 <div class="feature-grids">
 			 <div class="col-md-3 feature-grid jewel" *ngFor=" let product of products">
-				 <a href="product.html"><img src="https://product.hstatic.net/1000079871/product/s3162_efaeac9cba8c45ae84659a5051e6935f_master.jpg" alt=""/>	
+				 <a href="product.html"> <img class="card-img-top" src="{{product.image}}" alt=""> </a>
 					 <div class="arrival-info">
 						 <h4>{{product.name}}</h4>
 						 <p>Rs 12000</p>
@@ -15,7 +15,7 @@
 					 </div>
 					 <div class="shrt">
 						<a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
-					 </div></a>
+					 </div>
 			 </div>
 			 <!-- <div class="col-md-3 feature-grid">
 				 <a href="product.html"><img src="https://cf.shopee.vn/file/5c2d07566bdd72af90011e6933b3fb5e" alt=""/>	
