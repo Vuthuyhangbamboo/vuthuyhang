@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -40,7 +41,8 @@ import { ProductList2Component } from './product-list2/product-list2.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule 
+    FormsModule,
+    FontAwesomeModule
     // FormsModule
   ],
   // providers: [ProductService],
