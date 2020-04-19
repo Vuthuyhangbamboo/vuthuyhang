@@ -22,6 +22,7 @@ export class ProductComponent implements OnInit {
   }
 
   open(content) {
+    console.log("vao đay");
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {

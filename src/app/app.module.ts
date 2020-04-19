@@ -12,7 +12,9 @@ import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './product.service';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { CategoryComponent } from './category/category.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductComponent,
     FooterComponent,
     ProductListComponent,
-    ProductDetailComponent
+    AdminComponent,
+    CategoryComponent
   ],
   imports: [
     HttpClientModule,
