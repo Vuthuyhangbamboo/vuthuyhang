@@ -32,8 +32,6 @@
 						 <p>Rs 12000</p>
 						 <span class="pric1"><del>Rs {{product.price}}</del></span>
 						 <span class="disc">[12% Off]</span>
-             <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
 					 </div>
 					 <div class="viw">
 						<a href="product.html" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
@@ -43,7 +41,7 @@
 					 </div>
 
   <!-- dùng ng bootstrap xem chi tiết sản phẩm -->
-        <ng-template #content let-modal>
+  <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -68,8 +66,11 @@
   </div>
 </ng-template>
 
-<!-- <pre>{{ closeResult }}</pre> -->
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 
+<hr>
+
+<pre>{{ closeResult }}</pre>
 			 </div>
 	 </div>
 	 </div>
