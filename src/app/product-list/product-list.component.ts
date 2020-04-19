@@ -11,16 +11,15 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class ProductListComponent implements OnInit {
   products: Product[];
   productss: Product[];
-  items = this.products;
   page = 1;
-  pageSize = 10;
+  pageSize = 5;
   constructor(
     private productService : ProductService
   ) { }
 
   ngOnInit() {
-    this.getProductDre();
     this.getProductJe();
+    this.getProductDre();
   }
 
   getProductJe(){
@@ -30,5 +29,18 @@ export class ProductListComponent implements OnInit {
   getProductDre(){
   this.productService.getProductDress().subscribe(data2 => {this.productss=data2;})
 }
+
+  removeItemJe(id){
+   this.productService.removeProductJe(id).subscribe(response => {
+     this.products = this.products.filter(product => product.id != response.id);
+   })
+    // this.products = this.products.filter(product => product.id != id);
+  }
+  removeItemDe(id){
+   this.productService.removeProductDe(id).subscribe(response => {
+     this.products = this.products.filter(product => product.id != response.id);
+   })
+    // this.products = this.products.filter(product => product.id != id);
+  }
 
 }

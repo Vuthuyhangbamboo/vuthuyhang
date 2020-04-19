@@ -6,21 +6,10 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Amount</th>
-      <th><button class="btn-primary">Thêm</button></th>
+      <th><button class="btn-primary" >Thêm</button></th>
     </tr>
   </thead>
-  <tbody >
-    <tr *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-      <td>{{product.id}}</td>
-      <td><img src="{{product.image}}" height="100"></td>
-      <td>{{product.name}}</td>
-      <td>{{product.price}}</td>
-      <td>{{product.amount}}</td>
-      <td>
-        <button class="btn btn-primary">Sửa</button>
-        <button class="btn btn-primary" (click)="removeItemJe(product.id)">Xóa</button>
-      </td>
-    </tr>
+  <tbody > 
      <tr *ngFor="let product of productss | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <td>{{product.id}}</td>
       <td><img src="{{product.image}}" height="100"></td>

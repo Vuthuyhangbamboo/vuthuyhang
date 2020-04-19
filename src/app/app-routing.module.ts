@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { AdminComponent } from "./admin/admin.component";
 import { CategoryComponent } from "./category/category.component";
+import { ProductList1Component } from "./product-list1/product-list1.component";
+import { ProductList2Component } from "./product-list2/product-list2.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -32,7 +34,14 @@ const routes: Routes = [
        {path: "content", component: ContentComponent,
        children:[
          { path: "", redirectTo: "category", pathMatch: "full" },
-          { path: "category", component: CategoryComponent }
+          { path: "category", component: CategoryComponent,
+          children: [
+            { path: "", redirectTo: "product-list", pathMatch: "full" },
+            { path: "product-list", component: ProductListComponent},
+            { path: "product-list1", component: ProductList1Component},
+            { path: "product-list2", component: ProductList2Component}
+          ]
+          }
        ]
        }
     ]

@@ -1,5 +1,8 @@
-<div class="row">
-      <div class="col-lg-3">
+<ol class="breadcrumb">
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">Products</li>
+		 </ol>
+<div class="row">  
 <div class="rsidebar span_1_of_left">
         <section  class="sky-form">
 					 <div class="product_right">
@@ -11,20 +14,20 @@
 									<div class="clearfix"> </div>
 							  </ul>
                 <div class="single-bottom">						
-									<a href="#"><p>All</p></a>
+									<a routerLink="/admin/content/category/product-list" routerLinkActive="active"><p>All</p></a>
 						     </div>
-							 <div class="single-bottom">						
-									<a href="#"><p>Dresses & Vests</p></a>
+							 <div class="single-bottom">					
+									<a routerLink="/admin/content/category/product-list1" routerLinkActive="active"><p>Dresses & Vests</p></a>
 						     </div>
                  <div class="single-bottom">						
-									<a href="#"><p>Jewellerys</p></a>
+									<a routerLink="/admin/content/category/product-list2" routerLinkActive="active"><p>Jewellerys</p></a>
 						     </div>
 					      </div>						  
 					 </div> 
 				 </section>
 </div>
-  </div>
-      </div>
 <div class="col-lg-9">
-  <app-product-list></app-product-list>
+  <router-outlet></router-outlet>
 </div>
+</div>
+<app-footer></app-footer>
