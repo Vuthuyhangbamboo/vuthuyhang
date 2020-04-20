@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: "home", component: HomeComponent},
   { path: "admin", component: AdminComponent,
     children:[
-      { path: "",redirectTo: "productlist",component:ProductListComponent},
+      { path: "",redirectTo: "productlist",pathMatch: "full"},
       { path: "productlist", component: ProductListComponent},
       { path: "productlist1", component: ProductList1Component},
       { path: "productlist2", component: ProductList2Component}
