@@ -14,39 +14,15 @@ import { ProductList2Component } from "./product-list2/product-list2.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent,
-    children:[
-      { path: "", redirectTo: "content", pathMatch: "full" },
-      { path: "content", component: ContentComponent ,
-      children:[
-        { path: "", redirectTo: "introduce", pathMatch: "full" },
-        { path: "introduce", component: IntroduceComponent,
-        children:[
-          { path: "", redirectTo: "product", pathMatch: "full" },
-          { path: "product", component: ProductComponent }
-        ] },
-      ]}
-    ]
-   },
+  { path: "home", component: HomeComponent},
   { path: "admin", component: AdminComponent,
     children:[
-       { path: "", redirectTo: "content", pathMatch: "full" },
-       {path: "content", component: ContentComponent,
-       children:[
-         { path: "", redirectTo: "category", pathMatch: "full" },
-          { path: "category", component: CategoryComponent,
-          children: [
-            { path: "", redirectTo: "product-list", pathMatch: "full" },
-            { path: "product-list", component: ProductListComponent},
-            { path: "product-list1", component: ProductList1Component},
-            { path: "product-list2", component: ProductList2Component}
-          ]
-          }
-       ]
-       }
+      { path: "",redirectTo: "productlist",component:ProductListComponent},
+      { path: "productlist", component: ProductListComponent},
+      { path: "productlist1", component: ProductList1Component},
+      { path: "productlist2", component: ProductList2Component}
     ]
   },
-
   { path: "**", redirectTo: "404", pathMatch: "full" }
 ];
 
