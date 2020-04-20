@@ -25,7 +25,6 @@ import { ProductList2Component } from './product-list2/product-list2.component';
 
     HomeComponent,
     HeaderComponent,
-
     IntroduceComponent,
     ProductComponent,
     FooterComponent,
