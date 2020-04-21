@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
@@ -17,11 +16,7 @@ import { ContactComponent } from "./contact/contact.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent, 
-    children: [
-      { path: "contact", component: ContactComponent},
-    ]
-  },
+  { path: "home", component: HomeComponent},
   { path: "admin", component: AdminComponent,
     children:[
       { path: "",redirectTo: "productlist",pathMatch: "full"},
@@ -30,10 +25,9 @@ const routes: Routes = [
       { path: "productlist2", component: ProductList2Component},
       { path: "addproduct", component: AddProductComponent},
       { path: "editproduct", component: EditProductComponent}
-
-
     ]
   },
+  { path: "contact", component: ContactComponent},
   { path: "**", redirectTo: "404", pathMatch: "full" }
 ];
 
