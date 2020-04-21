@@ -6,7 +6,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Amount</th>
-      <th><button class="btn-primary">Thêm</button></th>
+      <th><a routerLink="/admin/addproduct" routerLinkActive="active"><button class="btn-primary" >Add Product</button></a></th>
     </tr>
   </thead>
   <tbody >
@@ -17,8 +17,8 @@
       <td>{{product.price}}</td>
       <td>{{product.amount}}</td>
       <td>
-        <button class="btn btn-primary">Sửa</button>
-        <button class="btn btn-primary" (click)="removeItemJe(product.id)">Xóa</button>
+        <button class="btn btn-primary" routerLink="/admin/editproduct" routerLinkActive="active">Edit Product</button>
+        <button class="btn btn-primary" (click)="removeItemJe(product.id)">Delete</button>
       </td>
     </tr>
      <tr *ngFor="let product of productss | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
@@ -28,8 +28,8 @@
       <td>{{product.price}}</td>
       <td>{{product.amount}}</td>
       <td>
-        <button class="btn btn-primary">Sửa</button>
-        <button class="btn btn-primary" (click)="removeItemDe(product.id)">Xóa</button>
+        <button class="btn btn-primary" routerLink="/admin/editproduct" routerLinkActive="active">Edit Product</button>
+        <button class="btn btn-primary" (click)="removeItemDe(product.id)">Delete</button>
       </td>
     </tr>
   </tbody>

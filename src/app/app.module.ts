@@ -17,6 +17,9 @@ import { AdminComponent } from './admin/admin.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductList1Component } from './product-list1/product-list1.component';
 import { ProductList2Component } from './product-list2/product-list2.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { ProductList2Component } from './product-list2/product-list2.component';
     AdminComponent,
     CategoryComponent,
     ProductList1Component,
-    ProductList2Component
+    ProductList2Component,
+    AddProductComponent,
+    EditProductComponent,
+    ContactComponent
   ],
   imports: [
     HttpClientModule,

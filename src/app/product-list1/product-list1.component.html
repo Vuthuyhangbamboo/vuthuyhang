@@ -6,7 +6,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Amount</th>
-      <th><button class="btn-primary" >Thêm</button></th>
+      <th><button class="btn-primary" routerLink="/admin/addproduct" routerLinkActive="active" >Add Product</button></th>
     </tr>
   </thead>
   <tbody > 
@@ -17,8 +17,8 @@
       <td>{{product.price}}</td>
       <td>{{product.amount}}</td>
       <td>
-        <button class="btn btn-primary">Sửa</button>
-        <button class="btn btn-primary" (click)="removeItemDe(product.id)">Xóa</button>
+        <button class="btn btn-primary" routerLink="/admin/editproduct" routerLinkActive="active">Edit Product</button>
+        <button class="btn btn-primary" (click)="removeItemDe(product.id)">Delete</button>
       </td>
     </tr>
   </tbody>
