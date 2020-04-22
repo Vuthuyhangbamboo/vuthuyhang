@@ -21,6 +21,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -42,6 +43,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     EditProductComponent,
     ContactComponent,
     ProductDetailComponent,
+    CartComponent,
   ],
   imports: [
     HttpClientModule,
