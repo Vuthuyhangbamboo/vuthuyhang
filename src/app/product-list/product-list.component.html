@@ -1,4 +1,4 @@
-<!-- <table class="table">
+ <table class="table">
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -17,7 +17,7 @@
       <td>{{product.price}}</td>
       <td>{{product.amount}}</td>
       <td>
-        <button class="btn btn-primary" routerLink="/admin/editproduct" routerLinkActive="active">Edit Product</button>
+        <button class="btn btn-primary" routerLink="/admin/edit/{{product.id}}" >Edit Product</button>
         <button class="btn btn-primary" (click)="removeItemJe(product.id)">Delete</button>
       </td>
     </tr>
@@ -28,11 +28,11 @@
       <td>{{product.price}}</td>
       <td>{{product.amount}}</td>
       <td>
-        <button class="btn btn-primary" routerLink="/admin/editproduct" routerLinkActive="active">Edit Product</button>
+        <button class="btn btn-primary" routerLink="/admin/edit/{{product.id}}">Edit Product</button>
         <button class="btn btn-primary" (click)="removeItemDe(product.id)">Delete</button>
       </td>
     </tr>
   </tbody>
 </table>
-<ngb-pagination [collectionSize]="30" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
- -->
+<ngb-pagination [collectionSize]="40" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+

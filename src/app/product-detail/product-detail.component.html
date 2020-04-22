@@ -1,0 +1,68 @@
+<app-header></app-header>
+<div class="single-sec">
+	 <div class="container">
+		 <ol class="breadcrumb">
+			 <li><a routerLink="/home">Home</a></li>
+			 <li class="active">Products Detail</li>
+		 </ol>
+		 <!-- start content -->	
+		 <div class="col-md-9 det">
+				 <div class="single_left" *ngIf="product">
+					 <div class="flexslider">
+									<img src="{{product.image}}" alt="" class="img-fluid" />								
+						</div>
+				 </div>
+				  <div class="single-right">
+					 <h3>{{product.name}}</h3>
+					 <div class="id"><h4>{{product.id}}</h4></div>
+					  <div class="cost">
+						 <div class="prdt-cost">
+							 <ul>								 
+								 <li>Sellling Price:</li>
+								 <li class="active"> Rs {{product.price}}</li>
+								 <a href="#">BUY NOW</a>
+							 </ul>
+						 </div>
+						 <div class="check">
+							 <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Enter pin code for delivery & availability</p>
+							 <form class="navbar-form navbar-left" role="search">
+								  <div class="form-group">
+									<input type="text" class="form-control" placeholder="Enter Pin code">
+								  </div>
+								  <button type="submit" class="btn btn-default">Verify</button>
+							 </form>
+						 </div>
+						 <div class="clearfix"></div>
+					  </div>
+					  <div class="item-list">
+						 <ul>
+							 <li>Material: Silver,Gold</li>
+							 <li>Color: White</li>
+							 <li>Type: Earring & Pendant Set</li>
+							 <li>Brand: American Diamond</li>
+							 <li><a href="#">Click here for more details</a></li>
+						 </ul>
+					  </div>
+					  <div class="single-bottom1">
+						<h6>Details</h6>
+						<p class="prod-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam. Ut wisi enim ad minim veniam iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+					 </div>					 
+				  </div>
+				  <div class="clearfix"></div>
+					<div class="sofaset-info">
+						 <h4>Product Summary: American Diamond Famina Ruby Copper, Brass Jewel Set</h4>
+						 <ul>
+							 <li>Classic and vibrant detailing</li>
+							 <li>Design: Exquisitely crafted necklace set to suit your festive mood</li>
+							 <li>Stones Used: Synthetic stones and beads</li>
+							 <li>Colour: Brown Jute, Sheron Brown</li>
+							 <li>Recommended Wear: Festive</li>
+							 <li>Note: The image has been enlarged for better viewing</li>
+							 <li>Contents: 4 Pc</li>
+							 <li>Delivery Time: 7 to 10 days from the Day of Dispatch</li>							 
+						 </ul>
+				  </div>
+	 </div>   
+</div>
+</div>
+<app-footer></app-footer>

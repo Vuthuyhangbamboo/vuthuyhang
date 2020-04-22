@@ -1,9 +1,9 @@
-<!-- <div class="featured">
+<div class="featured">
 	 <div class="container">
 		 <h3>Featured Products</h3>
 		 <div class="feature-grids">
 			 <div class="col-md-3 feature-grid jewel" *ngFor=" let product of products">
-				 <a href="product.html"> <img class="card-img-top" src="{{product.image}}" alt=""> </a>
+				 <a routerLink="/product/{{product.id}}"> <img class="card-img-top" src="{{product.image}}" alt=""> </a>
 					 <div class="arrival-info">
 						 <h4>{{product.name}}</h4>
 						 <p>Rs 12000</p>
@@ -11,22 +11,22 @@
 						 <span class="disc">[12% Off]</span>
 					 </div>
 					 <div class="viw">
-						<a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+						<a routerLink="/product/{{product.id}}" routerLinkActive="active"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
 					 </div>
 					 <div class="shrt">
-						<a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+						<a routerLink="/product/{{product.id}}" routerLinkActive="active"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
 					 </div>
 			 </div>
 	 </div>
 	 </div>
 </div>
 <!--sản phẩm váy cưới-->
-<!-- <div class="featured">
+<div class="featured">
 	 <div class="container">
 		 <h3>Featured Products</h3>
 		 <div class="feature-grids">
 			 <div class="col-md-3 feature-grid jewel" *ngFor=" let product of productss">
-				 <a href="product.html"> <img class="card-img-top" src="{{product.image}}" height="270"> </a>
+				 <a routerLink="/product/{{product.id}}" routerLinkActive="active"> <img class="card-img-top" src="{{product.image}}" height="270"> </a>
 					 <div class="arrival-info">
 						 <h4>{{product.name}}</h4>
 						 <p>Rs 12000</p>
@@ -34,13 +34,12 @@
 						 <span class="disc">[12% Off]</span>
 					 </div>
 					 <div class="viw">
-						<a href="product.html" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+						<a routerLink="/product/{{product.id}}" routerLinkActive="active" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
 					 </div>
 					 <div class="shrt">
-						<a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
-					 </div> -->
-            <!--  -->
-			 <!-- </div>
+						<a routerLink="/product/{{product.id}}" routerLinkActive="active"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+					 </div> 
+			  </div>
 	 </div>
 	 </div>
-</div>  -->
+</div> 

@@ -20,6 +20,8 @@ import { ProductList2Component } from './product-list2/product-list2.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { ContactComponent } from './contact/contact.component';
     ProductList2Component,
     AddProductComponent,
     EditProductComponent,
-    ContactComponent
+    ContactComponent,
+    ProductDetailComponent,
   ],
   imports: [
     HttpClientModule,

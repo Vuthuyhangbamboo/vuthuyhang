@@ -13,6 +13,7 @@ import { ProductList2Component } from "./product-list2/product-list2.component";
 import { AddProductComponent } from "./add-product/add-product.component";
 import { EditProductComponent } from "./edit-product/edit-product.component";
 import { ContactComponent } from "./contact/contact.component";
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -24,10 +25,11 @@ const routes: Routes = [
       { path: "productlist1", component: ProductList1Component},
       { path: "productlist2", component: ProductList2Component},
       { path: "addproduct", component: AddProductComponent},
-      { path: "editproduct", component: EditProductComponent}
+      { path: "edit/:productID", component: EditProductComponent}
     ]
   },
   { path: "contact", component: ContactComponent},
+  { path: "product/:productID", component: ProductDetailComponent},
   { path: "**", redirectTo: "404", pathMatch: "full" }
 ];
 
