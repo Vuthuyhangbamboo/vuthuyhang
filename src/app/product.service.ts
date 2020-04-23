@@ -8,6 +8,8 @@ apiJewe = 'https://5e7c7e0da917d70016683601.mockapi.io/jewelry';
 
 apiDress = 'https://5e7c7e0da917d70016683601.mockapi.io/weddingDress';
 
+apiOrder = 'https://5e7c7e0da917d70016683601.mockapi.io/Order';
+
   constructor(
     private http: HttpClient
   ) { }
@@ -19,6 +21,10 @@ apiDress = 'https://5e7c7e0da917d70016683601.mockapi.io/weddingDress';
 
    getProductDress(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiDress);
+  }
+
+    getProductOrder(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiOrder);
   }
 
     //show ra chi tiết sản phâm
@@ -40,6 +46,11 @@ apiDress = 'https://5e7c7e0da917d70016683601.mockapi.io/weddingDress';
     // return this.products.filter(product => product.id !== id);
   }
 
+  removeProductOrder(id): Observable<Product>{
+    return this.http.delete<Product>(`${this.apiOrder}/${id}`);
+    // return this.products.filter(product => product.id !== id);
+  }
+
   // thêm sản phẩm
 
   addProductJe(product){
@@ -49,6 +60,11 @@ apiDress = 'https://5e7c7e0da917d70016683601.mockapi.io/weddingDress';
   addProductDe(product){
     return this.http.post<Product>(`${this.apiDress}`, product);
   }
+
+  addProductOrder(product){
+    return this.http.post<Product>(`${this.apiOrder}`, product);
+  }
+
   // edit sản phẩm
   
   updateProductJe(product){

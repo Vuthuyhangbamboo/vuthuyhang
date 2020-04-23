@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Product } from '../product';
 
@@ -9,8 +9,10 @@ import { Product } from '../product';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
+  pro: Product = new Product();
   product: Product;
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private productService: ProductService
   ) { }
@@ -31,6 +33,12 @@ export class ProductDetailComponent implements OnInit {
     this.route.params.subscribe(param => {
         this.productService.showProductJ(param.productID).subscribe(data => this.product = data);
     })
+  }
+
+  addProductOrder(){
+    this.productService.addProductOrder(this.pro).subscribe(data =>{
+      this.router.navigateByUrl("/cart")
+    } );
   }
 
 }

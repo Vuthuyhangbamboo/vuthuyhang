@@ -14,6 +14,7 @@ import { AddProductComponent } from "./add-product/add-product.component";
 import { EditProductComponent } from "./edit-product/edit-product.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { CartComponent } from "./cart/cart.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -30,6 +31,7 @@ const routes: Routes = [
   },
   { path: "contact", component: ContactComponent},
   { path: "product/:productID", component: ProductDetailComponent},
+  { path: "cart", component: CartComponent},
   { path: "**", redirectTo: "404", pathMatch: "full" }
 ];
 
