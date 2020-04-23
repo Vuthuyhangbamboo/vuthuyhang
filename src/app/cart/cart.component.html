@@ -27,7 +27,7 @@
       <td>{{product.id}}</td>
       <td><img src="{{product.image}}" height="100"></td>
       <td ng-model="name">{{product.name}}</td>
-      <td><input type="number" id="2" name="tich" value="{{product.amount}}"></td>
+      <td><input type="number" id="2" name="tich" value="{{product.price}}"></td>
       <td>
         <button class="btn btn-primary" (click)="removeItemOrder(product.id)">Delete from cart</button>
       </td>
@@ -57,13 +57,13 @@
       <td>{{product.name}}</td>
       <td>{{product.price}}</td>
       <td>{{product.amount}}</td>
-      <td>{{product.price}}</td>
+      <td>{{product.price * product.amount}}</td>
     </tr>
     
   </tbody>
 </table>
 			 <h4 class="last-price">MONEY TOTAL</h4>
-			 <span class="total final">450.00</span>
+			 <span class="total final" (click)="loadCostPrice()">{{costPrice}}</span>
 			 <div class="clearfix"></div>
 			 <a class="order" href="#">Place Order</a>
 			 <div class="total-item">
