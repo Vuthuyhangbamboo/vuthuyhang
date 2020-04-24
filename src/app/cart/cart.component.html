@@ -20,6 +20,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Amount</th>
+      <th></th>
     </tr>
   </thead>
   <tbody > 
@@ -27,7 +28,9 @@
       <td>{{product.id}}</td>
       <td><img src="{{product.image}}" height="100"></td>
       <td ng-model="name">{{product.name}}</td>
-      <td><input type="number" id="2" name="tich" value="{{product.price}}"></td>
+      <td>{{product.price}}</td>
+      <td>{{product.amount}}</td>
+      <td></td>
       <td>
         <button class="btn btn-primary" (click)="removeItemOrder(product.id)">Delete from cart</button>
       </td>
