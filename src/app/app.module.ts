@@ -11,7 +11,6 @@ import { HeaderComponent } from './header/header.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './product.service';
 import { AdminComponent } from './admin/admin.component';
 import { CategoryComponent } from './category/category.component';
@@ -22,6 +21,8 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { ShopComponent } from './shop/shop.component';
+import { Shop1Component } from './shop1/shop1.component';
 
 
 
@@ -34,7 +35,6 @@ import { CartComponent } from './cart/cart.component';
     IntroduceComponent,
     ProductComponent,
     FooterComponent,
-    ProductListComponent,
     AdminComponent,
     CategoryComponent,
     ProductList1Component,
@@ -44,6 +44,8 @@ import { CartComponent } from './cart/cart.component';
     ContactComponent,
     ProductDetailComponent,
     CartComponent,
+    ShopComponent,
+    Shop1Component,
   ],
   imports: [
     HttpClientModule,

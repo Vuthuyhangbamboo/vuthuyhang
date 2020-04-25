@@ -9,7 +9,6 @@ import { Product } from "../product";
   styleUrls: ["./product-detail.component.css"]
 })
 export class ProductDetailComponent implements OnInit {
-  // pro: Product = new Product();
   product: Product;
   constructor(
     private router: Router,
@@ -45,9 +44,6 @@ export class ProductDetailComponent implements OnInit {
   }
 
   addProductOrder(id) {
-    // this.productService.addProductDe(this.pro).subscribe(data => {
-    //   this.router.navigateByUrl("/cart");
-    // });
     this.productService.addProductOrder(this.product).subscribe(Response => {
       this.router.navigateByUrl("/cart");
     });

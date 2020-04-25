@@ -6,8 +6,8 @@
 				 <a routerLink="/product/{{product.id}}"> <img class="card-img-top" src="{{product.image}}" alt=""> </a>
 					 <div class="arrival-info">
 						 <h4>{{product.name}}</h4>
-						 <p>Rs 12000</p>
-						 <span class="pric1"><del>Rs {{product.price}}</del></span>
+						 <p>Rs {{product.price*0.88}}</p>
+						 <span class="price"><del>Rs {{product.price}}</del></span>
 						 <span class="disc">[12% Off]</span>
 					 </div>
 					 <div class="viw">
@@ -29,9 +29,9 @@
 				 <a routerLink="/product/{{product.id}}" routerLinkActive="active"> <img class="card-img-top" src="{{product.image}}" height="270"> </a>
 					 <div class="arrival-info">
 						 <h4>{{product.name}}</h4>
-						 <p>Rs 12000</p>
+						 <p>Rs {{product.price*0.89}}</p>
 						 <span class="pric1"><del>Rs {{product.price}}</del></span>
-						 <span class="disc">[12% Off]</span>
+						 <span class="disc">[11% Off]</span>
 					 </div>
 					 <div class="viw">
 						<a routerLink="/product/{{product.id}}" routerLinkActive="active" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>

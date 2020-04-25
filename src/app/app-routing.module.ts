@@ -5,7 +5,6 @@ import { HeaderComponent } from './header/header.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { AdminComponent } from "./admin/admin.component";
 import { CategoryComponent } from "./category/category.component";
 import { ProductList1Component } from "./product-list1/product-list1.component";
@@ -15,17 +14,18 @@ import { EditProductComponent } from "./edit-product/edit-product.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { CartComponent } from "./cart/cart.component";
+import { ShopComponent } from "./shop/shop.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent},
   { path: "admin", component: AdminComponent,
     children:[
-      { path: "",redirectTo: "productlist",pathMatch: "full"},
-      { path: "productlist", component: ProductListComponent},
+      { path: "",redirectTo: "productlist1",pathMatch: "full"},
       { path: "productlist1", component: ProductList1Component},
       { path: "productlist2", component: ProductList2Component},
       { path: "addproduct", component: AddProductComponent},
+      { path: "shop", component: ShopComponent},
       { path: "edit/:productID", component: EditProductComponent}
     ]
   },

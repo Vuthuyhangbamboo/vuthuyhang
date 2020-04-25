@@ -46,8 +46,8 @@ apiOrder = 'https://5e7c7e0da917d70016683601.mockapi.io/Order';
     // return this.products.filter(product => product.id !== id);
   }
 
-  removeProductOrder(id): Observable<Product>{
-    return this.http.delete<Product>(`${this.apiOrder}/${id}`);
+  removeProductOrder(name): Observable<Product>{
+    return this.http.delete<Product>(`${this.apiOrder}/${name}`);
     // return this.products.filter(product => product.id !== id);
   }
 

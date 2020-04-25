@@ -1,0 +1,23 @@
+<div class="featured">
+  <h3>Our Products</h3>
+	 <div class="container">
+		 <div class="feature-grids">
+			 <div class="col-md-2 feature-grid jewel" *ngFor=" let product of productss">
+				 <a routerLink="/product/{{product.id}}" routerLinkActive="active"> <img class="card-img-top" src="{{product.image}}" height="190"> </a>
+					 <div class="arrival-info">
+						 <h4>{{product.name}}</h4>
+						 <p>Rs {{product.price*0.89}}</p>
+						 <span class="pric1"><del>Rs {{product.price}}</del></span>
+						 <span class="disc">[11% Off]</span>
+					 </div>
+           <button class="btn-primary">Add To Cart</button>
+					 <div class="viw">
+						<a routerLink="/product/{{product.id}}" routerLinkActive="active" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+					 </div>
+					 <div class="shrt">
+						<a routerLink="/product/{{product.id}}" routerLinkActive="active"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+					 </div> 
+			  </div>
+	 </div>
+	 </div>
+</div> 	
