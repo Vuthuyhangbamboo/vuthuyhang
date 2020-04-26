@@ -1,18 +1,31 @@
-<h2>Edit Product</h2>
-<form *ngIf="product">
-
-  <div class="form-group">
-    <label for=""> Id </label>
-    <input type="text" name="id" class="form-control" placeholder="Product Name" [(ngModel)]="product.id">
-    <label for=""> Name </label>
-    <input type="text" name="name" class="form-control" placeholder="Price" [(ngModel)]="product.name">
-    <label for=""> Price </label>
-    <input type="text" name="price" class="form-control" placeholder="Price" [(ngModel)]="product.price">
-    <label for=""> Image </label>
-    <img src="{{product.image}}" height="300" />	
-    <input type="text" name="image" class="form-control" placeholder="Price" [(ngModel)]="product.image">
-    <label for=""> Amount </label>
-    <input type="text" name="amount" class="form-control" placeholder="Price" [(ngModel)]="product.amount">
+<form #editproduct="ngForm" *ngIf="product" >
+  <h1>Edit Product</h1>
+  <br>
+  <br>
+  <div class="form-group" >
+    <label for="id">ID</label>
+    <input type="text" name="id" placeholder="Id" class="form-control" required [(ngModel)]="product.id" #productId="ngModel">
+    <div [hidden]="productId.valid || productId.pristine" class="alert alert-danger"> Id is required ( must not blank )</div>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="updateProductJe()">Submit</button>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Name" class="form-control" required [(ngModel)]="product.name" #productName="ngModel">
+    <div [hidden]="productName.valid || productName.pristine" class="alert alert-danger"> Name is required ( must not blank )</div>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" name="price" placeholder="price" class="form-control" required [(ngModel)]="product.price" #productPrice="ngModel">
+    <div [hidden]="productPrice.valid || productPrice.pristine" class="alert alert-danger"> Price is required ( must not blank )</div>
+  </div>
+  <div class="form-group">
+    <label for="price">Image</label>
+    <input type="text" name="Image" placeholder="Image" class="form-control" required [(ngModel)]="product.image" #productImage="ngModel">
+    <div [hidden]="productImage.valid || productImage.pristine" class="alert alert-danger"> image is required ( must not blank )</div>
+  </div>
+  <div class="form-group">
+    <label for="price">Amount</label>
+    <input type="number" min="1" name="Amount" placeholder="Amount" class="form-control" required [(ngModel)]="product.amount" #productAmount="ngModel">
+    <div [hidden]="productAmount.valid || productAmount.pristine" class="alert alert-danger"> amount is required ( must not blank )</div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!editproduct.form.valid" (click)="updateProductJe()">Edit product</button>
 </form>

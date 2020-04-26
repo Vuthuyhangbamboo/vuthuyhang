@@ -1,3 +1,10 @@
+.ng-valid[required], .ng-valid.required{
+  border: 2px solid #2fbe66;
+}
+.ng-invalid:not(form) {
+  border: 2px solid #db260e;
+}
+
 .row1{
 	outline: none;
 	margin: 0px 0 0px 0px;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-add-product',
@@ -12,6 +12,7 @@ export class AddProductComponent implements OnInit {
   product: Product = new Product();
   constructor(
     private productService: ProductService,
+    private route: ActivatedRoute,
     private router: Router
   ) { }
 
@@ -19,8 +20,16 @@ export class AddProductComponent implements OnInit {
   }
 
   addProductJe(){
+    // this.route.params.subscribe(id => {
+    //   const IdFace = id.productID.charAt(0) + id.productID.charAt(1);
+    //   if (IdFace == "je") {
+    //     this.getProductt();
+    //   } else {
+    //     this.getProduct();
+    //   }
+    // });
     this.productService.addProductJe(this.product).subscribe(data =>{
-       this.router.navigateByUrl("/admin")
+       this.router.navigateByUrl("/admin/productlist2")
     } );
   }
   

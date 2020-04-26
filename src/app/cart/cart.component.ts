@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from "../product";
 import { ProductService } from '../product.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute, Router } from "@angular/router";
 import { async } from '@angular/core/testing';
 @Component({
   selector: 'app-cart',
@@ -14,7 +15,8 @@ export class CartComponent implements OnInit {
   pageSize = 5;
   costPrice = 0;
   constructor(
-    private productService : ProductService
+    private productService : ProductService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -31,10 +33,14 @@ export class CartComponent implements OnInit {
 }
 
   removeItemOrder(id){
-   this.productService.removeProductOrder(id).subscribe(response => {
+    (async () => {
+      await new Promise((resolve, reject) => {
+        this.productService.removeProductOrder(id).subscribe(response => {
      this.products = this.products.filter(product => product.id != response.id);
    })
-    // this.products = this.products.filter(product => product.id != id);
+      });
+      this.loadCostPrice();
+    })();
   }
 
   loadCostPrice() {
