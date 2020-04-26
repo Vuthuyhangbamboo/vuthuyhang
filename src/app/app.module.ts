@@ -22,14 +22,12 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { ShopComponent } from './shop/shop.component';
-import { Shop1Component } from './shop1/shop1.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
     HeaderComponent,
     IntroduceComponent,
@@ -45,7 +43,6 @@ import { Shop1Component } from './shop1/shop1.component';
     ProductDetailComponent,
     CartComponent,
     ShopComponent,
-    Shop1Component,
   ],
   imports: [
     HttpClientModule,
