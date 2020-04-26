@@ -22,6 +22,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { ShopComponent } from './shop/shop.component';
+import { WeddingComponent } from './wedding/wedding.component';
+import { Shop1Component } from './shop1/shop1.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -43,6 +46,9 @@ import { ShopComponent } from './shop/shop.component';
     ProductDetailComponent,
     CartComponent,
     ShopComponent,
+    WeddingComponent,
+    Shop1Component,
+    DashboardComponent,
   ],
   imports: [
     HttpClientModule,

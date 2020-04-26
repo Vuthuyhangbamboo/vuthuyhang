@@ -25,11 +25,16 @@
             "styles": [
               "src/styles.css",
               "src/assets/css/bootstrap.css",
+              "src/assets/css/bootstrap.min.css",
               "src/assets/css/form.css",
               "src/assets/css/flexslider.css",
               "src/assets/css/jquery-ui.css",
               "src/assets/css/memenu.css",
-              "src/assets/css/style.css"
+              "src/assets/css/style.css",
+              "src/assets/css/morris.css",
+              "src/assets/css/monthly.css",
+              "src/assets/css/minimal.css",
+              "src/assets/css/jqvmap.css"
 
             ],
             "scripts": []

@@ -9,10 +9,6 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 
-.footer{
-  text-align: center;
-}
-
 html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
@@ -88,74 +84,6 @@ body a:hover{
     position:absolute;
     right:10px;
 }
-
- 
-/*----- Phần menu -----*/
-.menu {
-    width:250px;
-    /* background:#bf5c71; */
-    height: 40px;
-    /* margin-top: 150px; */
-}
-.menu li {
-    margin:0px;
-    /* list-style:none; */
-    font-family:'Ek Mukta';
-}
-.menu a {
-    /* transition:all linear 0.15s; */
-    color:#f7eaea;
-    /* text-decoration:none; */
-}
-
-.menu .arrow {
-    font-size:11px;
-    line-height:0%;
-} 
-/*----- css cho phần menu cha -----*/
-.menu > ul > li {
-    /* float:left; */
-    /* position:relative; */
-    font-size:15px;
-}
-.menu > ul > li > a {
-    padding:10px 40px;
-    display:inline-block;
-    color:white;
-}
-.menu > ul > li:hover > a, .menu > ul > .current-item > a {
-    background:#d47b8a;
-}
-/*----css cho menu con----*/
-.menu li:hover .sub-menu {
-    z-index:1;
-    opacity:1;
-}
-.sub-menu {
-    width:100%;
-    padding:5px 0px;
-    position:absolute;
-    top:100%;
-    left:0px;
-    z-index:-1;
-    opacity:0;
-    transition:opacity linear 0.15s;
-    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
-    background:#816a6e;
-}
-.sub-menu li {
-    display:block;
-    font-size:16px;
-}
-.sub-menu li a {
-    padding:10px 30px;
-    display:block;
-}
-.sub-menu li a:hover, .sub-menu .current-item a {
-    background:#3e3436;
-}
-
-
 .right-side-accordion .active .dcjq-icon {
     background:url(../images/acc-expand.png) no-repeat bottom;
     border-radius:3px;
@@ -167,27 +95,27 @@ body a:hover{
 }
 /*---*/
 .nav-collapse.collapse {
-    display:block;
+    display:inline;
 }
 ul.sidebar-menu,ul.sidebar-menu li ul.sub {
     margin:-2px 0 0;
     padding:0;
 }
 ul.sidebar-menu {
-    padding-top:100px;
+    padding-top:80px;
 
 }
 #sidebar>ul>li>ul.sub {
-    display:block;
+    display:none;
 }
 #sidebar .sub-menu>.sub li a {
-    padding-left:10px;
+    padding-left:46px;
 }
 #sidebar>ul>li.active>ul.sub,#sidebar>ul>li>ul.sub>li>a {
     display:block;
 }
 ul.sidebar-menu li ul.sub li {
-    background:rgba(129, 51, 51, 0);
+    background:rgba(52, 48, 48, 0);
     margin-bottom:0;
     margin-left:0;
     margin-right:0;
@@ -211,10 +139,10 @@ ul.sidebar-menu li ul.sub li a:hover,ul.sidebar-menu li ul.sub li.active a {
     -ms-transition:all 0.3s ease;
     transition:all 0.3s ease;
     display:block;
-    background:rgba(201, 201, 218, 0.28);
+    background:rgba(40, 40, 46, 0.28);
 }
 ul.sidebar-menu li {
-    border-bottom:1px solid rgba(85, 9, 9, 0.05);
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 ul.sidebar-menu li.sub-menu {
     line-height:15px;

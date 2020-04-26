@@ -6,7 +6,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  faCoffee = faShoppingCart;
+  faShoppingCart = faShoppingCart;
   constructor() { }
 
   ngOnInit() {

@@ -1,2 +1,49 @@
-<app-header></app-header>
-<app-category></app-category>
+<section id="container">
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+    <a href="index.html" class="logo">
+        VISITORS
+    </a>
+</div>
+</header>
+<aside>
+    <div id="sidebar" class="nav-collapse">
+            <div class="wrapper">
+    <nav class="menu">
+        <ul class="clearfix">
+            <li><a routerLink ="/admin/dashboard" routerLinkActive="active"> <i><fa-icon [icon]="faTachometerAlt"></fa-icon></i>    DashBoard</a></li>
+            <li>
+                <a routerLink ="/admin/productlist1" routerLinkActive="active"> <i><fa-icon [icon]="faChartPie"></fa-icon></i> Product Manager <span class="arrow">&#9660;</span></a>
+ 
+                <ul class="sub-menu">
+                    <li><a routerLink ="/admin/productlist1" routerLinkActive="active">Dresses & Vests</a></li>
+                    <li><a routerLink ="/admin/productlist2" routerLinkActive="active">Jewellerys</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+                
+              
+       </div>
+    </div>
+</aside>
+<!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<router-outlet></router-outlet>
+</section>
+ <!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>Copyright © 2020 Wedding Store. All Rights Reserved | Design by HangBamboo</p>
+			</div>
+		  </div>
+  <!-- / footer -->
+</section>
+<!--main content end-->
+</section>

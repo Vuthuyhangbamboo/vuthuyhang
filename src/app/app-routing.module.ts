@@ -15,23 +15,34 @@ import { ContactComponent } from "./contact/contact.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { CartComponent } from "./cart/cart.component";
 import { ShopComponent } from "./shop/shop.component";
+import { WeddingComponent } from "./wedding/wedding.component";
+import { Shop1Component } from "./shop1/shop1.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent},
-  { path: "admin", component: AdminComponent,
+  { path: "wedding", component: WeddingComponent,
     children:[
-      { path: "",redirectTo: "productlist1",pathMatch: "full"},
-      { path: "productlist1", component: ProductList1Component},
-      { path: "productlist2", component: ProductList2Component},
-      { path: "addproduct", component: AddProductComponent},
+      { path: "",redirectTo: "shop",pathMatch: "full"},
       { path: "shop", component: ShopComponent},
-      { path: "edit/:productID", component: EditProductComponent}
+      { path: "shop1", component: Shop1Component},
+      
     ]
   },
   { path: "contact", component: ContactComponent},
   { path: "product/:productID", component: ProductDetailComponent},
   { path: "cart", component: CartComponent},
+  { path: "admin", component: AdminComponent,
+    children: [
+         { path: "",redirectTo: "dashboard",pathMatch: "full"},
+         { path: "dashboard", component: DashboardComponent},
+         { path: "productlist1", component: ProductList1Component},
+         { path: "productlist2", component: ProductList2Component},
+         { path: "edit/:productID", component: EditProductComponent},
+         { path: "addproduct", component: AddProductComponent}
+    ]  
+  },
   { path: "**", redirectTo: "404", pathMatch: "full" }
 ];
 
