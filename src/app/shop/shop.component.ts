@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class ShopComponent implements OnInit {
   productss: Product[];
-  product: Product = new Product();
+  product: Product;
   constructor(
     private productService : ProductService,
     private route : ActivatedRoute,
@@ -18,13 +18,7 @@ export class ShopComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe(id => {
-      const IdFace = id.productID.charAt(0) + id.productID.charAt(1);
-      if (IdFace == "je") {
-        this.getProductDre();
-      } else {
-      }
-    });
+        this.getProductDre();   
   }
   getProductDre(){
   this.productService.getProductDress().subscribe(data2 => {this.productss=data2;})
