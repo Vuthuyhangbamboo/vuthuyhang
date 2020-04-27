@@ -8,6 +8,7 @@ import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faChartPie } from '@fortawesome/free-solid-svg-icons';
 
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',

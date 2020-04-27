@@ -27,5 +27,5 @@
     <input type="number" min="1" name="Amount" placeholder="Amount" class="form-control" required [(ngModel)]="product.amount" #productAmount="ngModel">
     <div [hidden]="productAmount.valid || productAmount.pristine" class="alert alert-danger"> amount is required ( must not blank )</div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="!editproduct.form.valid" (click)="updateProductJe()">Edit product</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!editproduct.form.valid" (click)="update()">Edit product</button>
 </form>

@@ -3,9 +3,32 @@
 <header class="header fixed-top clearfix">
 <!--logo start-->
 <div class="brand">
-    <a href="index.html" class="logo">
+    <a routerLink="/admin" class="logo">
         VISITORS
     </a>
+</div>
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+      <li class="search">
+        <img src="https://cdn1.iconfinder.com/data/icons/modern-flat-app-gui-1/50/Search-512.png">
+            <!-- <input type="text" class="search" placeholder=" Search"> -->
+        </li>
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" routerLink="/admin" >
+                <img src="https://scontent.fhph1-2.fna.fbcdn.net/v/t1.0-9/p960x960/76943659_2470010316619687_5813213925621104640_o.jpg?_nc_cat=103&_nc_sid=85a577&_nc_ohc=kGvgxsh0DjEAX8rC69k&_nc_ht=scontent.fhph1-2.fna&_nc_tp=6&oh=bdd263a8071223e4b490dfedc92c7bbd&oe=5ECCEEBC" height="32">
+                <span class="username">Vũ Thúy Hằng</span>
+            </a>
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+       
+    </ul>
+    <!--search & user info end-->
 </div>
 </header>
 <aside>

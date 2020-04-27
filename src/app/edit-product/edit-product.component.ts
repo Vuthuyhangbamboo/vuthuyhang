@@ -33,15 +33,24 @@ export class EditProductComponent implements OnInit {
 
   updateProductDe(){
       this.productService.updateProductDe(this.product).subscribe(data => {
-        this.router.navigateByUrl("/admin")
+        this.router.navigateByUrl("/admin/productlist1")
       });
   }
 
   updateProductJe(){
       this.productService.updateProductJe(this.product).subscribe(data => {
-        this.router.navigateByUrl("/admin")
+        this.router.navigateByUrl("/admin/productlis2")
       });
   }
-
+    update(){
+      this.route.params.subscribe(id => {
+      const IdFace = id.productID.charAt(0) + id.productID.charAt(1);
+      if (IdFace == "je") {
+        this.updateProductJe();
+      } else {
+        this.updateProductDe();
+      }
+    });
+    }
   
 }
