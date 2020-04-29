@@ -19,7 +19,9 @@
 						 <div class="prdt-cost">
 							 <ul>								 
 								 <li>Sellling Price:</li>
-								 <li class="active"> Rs {{product.price}}</li>
+								 <li class="active"> Rs {{product.price*0.88}}</li>
+                 <span class="pric1"><del>Rs {{product.price}}</del></span>
+                 <br>
 								 <a (click)="addProductOrder()">BUY NOW</a>
 							 </ul>
 						 </div>
